@@ -5,9 +5,6 @@ import (
 )
 
 func main() {
-	//PrintGreeting()
-	//PrintWeather()
-	//PrintTrafficLight()
 	//GetGrade()
 	//GetDiscount()
 	//GetTemperatureDescription()
@@ -107,47 +104,6 @@ func main() {
 
 	validatorQwerty := CreateValidator("Qwerty")
 	fmt.Println(validatorQwerty("qwerty"))
-}
-
-func PrintGreeting() {
-	var dayType string
-	fmt.Println("Введите время дня ")
-	fmt.Scanf("%s", &dayType)
-	switch dayType {
-	case "день":
-		fmt.Printf("Добрый %s", dayType)
-
-	case "вечер":
-		fmt.Printf("Добрый %s", dayType)
-	}
-}
-
-func PrintWeather() {
-	var weatherType string
-	fmt.Println("Введите погоду ")
-	fmt.Scanf("%s", &weatherType)
-	switch weatherType {
-	case "солнечно":
-		fmt.Println("Солнечно")
-	case "облачно":
-		fmt.Printf("Облачно")
-	case "дождливо":
-		fmt.Printf("Дождливо")
-	}
-}
-
-func PrintTrafficLight() {
-	var lightColor string
-	fmt.Println("Введите цвет ")
-	fmt.Scanf("%s", &lightColor)
-	switch lightColor {
-	case "красный":
-		fmt.Println("Стоп")
-	case "желтый":
-		fmt.Printf("Внимание")
-	case "зеленый":
-		fmt.Printf("Идите")
-	}
 }
 
 func GetGrade() {
