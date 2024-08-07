@@ -1,39 +1,29 @@
 package main
 
-import "fmt"
+import "time"
 
-// 2. Оценки студента
-//    • Описание: Реализуйте структуру Student с полем grades (срез оценок).
-//   	Реализуйте метод AddGrade, добавляющий оценку, и метод AverageGrade, возвращающий среднее значение оценок.
+// 30. Отслеживание активностей пользователя
+//    • Описание: Реализуйте структуру Activity с полями activityType и timestamp.
+//   	Реализуйте структуру UserActivityTracker с срезом активностей и методы для добавления активности и получения
+//  	всех активностей после определенного времени.
 //    • Методы:
-//        ◦ AddGrade(grade int)
-//        ◦ AverageGrade() float64
+//        ◦ AddActivity(activityType string, timestamp time.Time)
+//        ◦ ActivitiesAfterTime(timestamp time.Time) []Activity
 
-type Student struct {
-	grades []int
+type Activity struct {
+	activityType string
+	timestamp    time.Time
+}
+type UserActivityTracker struct {
+	activities []Activity
 }
 
-func (r *Student) AddGrade(grade int) {
-	r.grades = append(r.grades, grade)
+func (u *UserActivityTracker) AddActivity(activityType string, timestamp time.Time) {
+
 }
-func (r *Student) AverageGrade() float64 {
-	var sum float64
-	for _, grade := range r.grades {
-		sum += float64(grade)
-	}
-	return sum / float64(len(r.grades))
+func (u *UserActivityTracker) ActivitiesAfterTime(timestamp time.Time) []Activity {
+	return u.activities
 }
 func main() {
-	s1 := Student{grades: make([]int, 0)}
-	s2 := Student{grades: make([]int, 0)}
 
-	s1.AddGrade(70)
-	s1.AddGrade(86)
-	s1.AddGrade(65)
-
-	s2.AddGrade(85)
-	s2.AddGrade(87)
-
-	fmt.Printf("Average grade for student 1 is: %.2f\n", s1.AverageGrade())
-	fmt.Printf("Average grade for student 2 is: %.2f\n", s2.AverageGrade())
 }
